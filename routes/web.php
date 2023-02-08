@@ -26,12 +26,5 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::middleware(['auth', 'verified'])
-   ->name('admin.')
-   ->prefix('ad')
-   ->group(function () {
-         Route::get('/dash', [MainController :: class, 'logged'])
-         ->name('logged');
-   });
-
+Route::get('/logged', [MainController :: class, 'logged']) -> middleware(['auth', 'verified']) -> name('logged');
 require __DIR__.'/auth.php';
