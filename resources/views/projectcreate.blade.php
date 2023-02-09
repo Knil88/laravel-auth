@@ -12,9 +12,12 @@
         </ul>
     </div>
     @endif
-    <section class="h-100">
+    <section>
 
     </section>
+
+    {{-- Impostiamo la route su project.store --}}
+
     <form class="d-flex flex-column bg-secondary text-white p-3 rounded-2" method="POST" action="{{ route('project.store') }}">
         @csrf
         <h1>New 
@@ -34,6 +37,7 @@
         <label for="repo_link">link github</label>
         <input type="text" name="repo_link">
         
+        {{-- Il submit immetterà tutti i dati del form in un nuovo progetto e ci reindirizzerà alla home --}}
         
         <input type="submit" value="CREATE NEW  PROJECT">
     </form>
