@@ -12,6 +12,9 @@
         </ul>
     </div>
     @endif
+    <section class="h-100">
+
+    </section>
     <form class="d-flex flex-column bg-secondary text-white p-3 rounded-2" method="POST" action="{{ route('project.store') }}">
         @csrf
         <h1>New 

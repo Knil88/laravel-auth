@@ -1,1 +1,20 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+body{
+    background-image: url('https://img.lovepik.com/background/20211021/large/lovepik-background-of-digital-technology-image_400253689.jpg');
+   background-size: cover;
+}
+header,footer{
+    background-color: #001e6a;
+}
+section{
+    height: 80vh;
+    overflow: scroll;
+}
+form{
+    max-height: 470px;
+    align-self: center;
+}
+footer{
+    height: 50px;
+}
