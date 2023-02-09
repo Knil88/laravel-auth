@@ -16,11 +16,11 @@
              <p class="card-text">{{$project->description}}</p>
              <div class="d-flex justify-content-between align-items-center">
                <div class="btn-group">
-                 <button type="button" class="btn border"><a href="{{route('project.show',$project)}}" class="text-decoration-none text-black">View</a></button>
+                 <button type="button" class="btn border btn_hover  "><a href="{{route('project.show',$project)}}" class="  btn_hover text-decoration-none ">View</a></button>
                  @auth
-                 <button type="button" class="btn border mx-1"><a href="{{route('project.destroy',$project)}}" class="text-decoration-none text-black">Delete</a></button>
-                 <button type="button" class="btn border mx-1"><a href="{{route('project.create',$project)}}" class="text-decoration-none text-black">Create</a></button>
-                 <button type="button" class="btn border mx-1"><a href="{{route('project.edit',$project)}}" class="text-decoration-none text-black">Edit</a></button>
+                 <button type="button" class="btn border  btn_hover  mx-1"><a href="{{route('project.destroy',$project)}}" class=" btn_hover text-decoration-none ">Delete</a></button>
+                 <button type="button" class="btn border btn_hover  mx-1"><a href="{{route('project.create',$project)}}" class="btn_hover text-decoration-none ">Create</a></button>
+                 <button type="button" class="btn border  btn_hover  mx-1"><a href="{{route('project.edit',$project)}}" class="btn_hover text-decoration-none ">Edit</a></button>
                  @endauth
                  </div>
              </div>
