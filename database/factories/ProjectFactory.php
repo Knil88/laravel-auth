@@ -3,9 +3,10 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Project;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Project>
  */
 class ProjectFactory extends Factory
 {
@@ -17,7 +18,16 @@ class ProjectFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name'=>fake()->name(),
+            'description' => fake() -> boolean() 
+						 ? fake() -> paragraph()
+						 : '',
+            'main_image'=>fake()->imageUrl(),
+            'release_date'=>fake()->date(),
+            'repo_link'=>fake()->url(),
+
+
+
         ];
     }
 }
