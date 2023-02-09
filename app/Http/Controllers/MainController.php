@@ -80,7 +80,7 @@ class MainController extends Controller
 
         ]);
     
-        $project = new Project();
+       
     
         $project -> name = $data['name'];
         $project -> description = $data['description'];

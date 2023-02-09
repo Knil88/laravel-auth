@@ -1,6 +1,6 @@
 @extends('layouts')
 @section('content')
-<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+<div class="row flex-lg-row-reverse align-items-center g-5 py-5 w-75 m-auto">
     <div class="col-10 col-sm-8 col-lg-6">
       <img src={{$project->main_image}} class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" width="700" height="500">
     </div>
@@ -13,7 +13,7 @@
             
         </div>
         <div>
-            Repo Link: <a href="{{$project->repo_link}}">{{$project->repo_link}}</a>
+            Repo Link: <a href="{{$project->repo_link}}">{{$project->name}}</a>
         </div>
       </div>
     </div>
