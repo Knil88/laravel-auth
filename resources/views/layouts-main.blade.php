@@ -10,7 +10,7 @@
 </head>
 <body>
     @include('header')
-   @yield('content-section')
+   @yield('form')
    @include('footer')
 </body>
 </html>

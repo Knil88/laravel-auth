@@ -35,6 +35,19 @@ Route :: get('/project/show/{project}', [MainController :: class, 'projectshow']
     -> name('project.show');
 
 //Delete:collegando la route con il link si potrà cancellare il dato
+
 Route :: get('/project/destroy/{project}', [MainController :: class, 'projectdelete'])
     -> name('project.destroy');
+
+    //Create: collegando la route il link si potrà creare un nuovo dato
+
+    Route :: get('/project/create', [MainController :: class, 'projectcreate'])
+    -> name('project.create');
+
+//Con store riusciamo ad immettere in nuovi dati collegando i dati del form
+
+    Route :: post('/project/store', [MainController :: class, 'projectstore'])
+    -> name('project.store');
+
+//
 
