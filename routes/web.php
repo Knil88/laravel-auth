@@ -28,3 +28,13 @@ Route::middleware('auth')->group(function () {
 });
 Route::get('/logged', [MainController :: class, 'logged']) -> middleware(['auth', 'verified']) -> name('logged');
 require __DIR__.'/auth.php';
+
+//Show collengado la route al link una volta cliccato appariranno tutte le specifiche
+
+Route :: get('/project/show/{project}', [MainController :: class, 'projectshow'])
+    -> name('project.show');
+
+//Delete:collegando la route con il link si potrà cancellare il dato
+Route :: get('/project/destroy/{project}', [MainController :: class, 'projectdelete'])
+    -> name('project.destroy');
+

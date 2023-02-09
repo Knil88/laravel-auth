@@ -8,6 +8,8 @@ use App\Models\Project;
 class MainController extends Controller
 
 {
+    //Pagina Home
+
     public function home(){
         $projects = Project::all();
         $data = [
@@ -16,7 +18,21 @@ class MainController extends Controller
         return view('home',compact('projects'));
     }
 
+    //Pagina Admin
+
     public function logged(){
         return view('logged');
+    }
+    //Pagina Show
+    public function projectshow(Project $project) {
+
+        return view('projectshow', compact('project'));
+    }
+
+    public function projectdelete(Project $project) {
+
+        $project -> delete();
+    
+        return redirect() -> route('home');
     }
 }
