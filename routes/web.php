@@ -49,5 +49,11 @@ Route :: get('/project/destroy/{project}', [MainController :: class, 'projectdel
     Route :: post('/project/store', [MainController :: class, 'projectstore'])
     -> name('project.store');
 
-//
+//Con Edit creiamo un metodo che quando si cliccherà sul link si potrà modificare un dato
+
+Route :: get('/project/edit/{project}', [MainController :: class, 'projectedit'])
+    -> name('project.edit');
+
+    Route :: post('/project/update/{project}', [MainController :: class, 'projectupdate'])
+    -> name('project.update');
 

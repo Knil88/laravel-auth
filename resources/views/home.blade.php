@@ -17,8 +17,9 @@
                   <div class="btn-group">
                     <button type="button" class="btn border"><a href="{{route('project.show',$project)}}" class="text-decoration-none text-black">View</a></button>
                     @auth
-                    <button type="button" class="btn border"><a href="{{route('project.destroy',$project)}}" class="text-decoration-none text-black">delete</a></button>
-                    <button type="button" class="btn border"><a href="{{route('project.create',$project)}}" class="text-decoration-none text-black">create</a></button>
+                    <button type="button" class="btn border mx-1"><a href="{{route('project.destroy',$project)}}" class="text-decoration-none text-black">Delete</a></button>
+                    <button type="button" class="btn border mx-1"><a href="{{route('project.create',$project)}}" class="text-decoration-none text-black">Create</a></button>
+                    <button type="button" class="btn border mx-1"><a href="{{route('project.edit',$project)}}" class="text-decoration-none text-black">Edit</a></button>
                     @endauth
                     </div>
                 </div>
