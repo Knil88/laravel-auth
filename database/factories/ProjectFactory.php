@@ -22,7 +22,7 @@ class ProjectFactory extends Factory
             'description' => fake() -> boolean() 
 						 ? fake() -> paragraph()
 						 : '',
-            'main_image'=>fake()->imageUrl(),
+            
             'release_date'=>fake()->date(),
             'repo_link'=>fake()->url(),
 

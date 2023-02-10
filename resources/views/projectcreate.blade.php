@@ -18,9 +18,9 @@
 
     {{-- Impostiamo la route su project.store --}}
 
-    <form class="d-flex flex-column bg-secondary text-white p-3 rounded-2" method="POST" action="{{ route('project.store') }}">
+    <form class="d-flex flex-column bg-secondary text-white p-3 rounded-2" method="POST" action="{{ route('project.store') }}" enctype="multipart/form-data">
         @csrf
-        <h1>New 
+        <h1  >New 
             Project</h1>
         <label for="name">Name</label>
         <input type="text" name="name">
