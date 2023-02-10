@@ -9,12 +9,12 @@
       <h1 class="display-5 fw-bold lh-1 mb-3 text-white">{{$project->name}}</h1>
       <p class="lead text-white">{{$project->description}}</p>
       <div class="d-grid gap-2 d-md-block justify-content-md-start">
-        <div class="text-white">
+        <div class="text-white my-2">
             Create:{{$project->release_date}}
             
         </div>
         <div class="text-white">
-            Repo Link: <a  class="text-white p-1 rounded-2 bg-primary" href="{{$project->repo_link}}">{{$project->name}}</a>
+            Repo Link: <a  class="text-white p-1 rounded-2 bg-primary" href="{{$project->repo_link}}">Github Link</a>
         </div>
       </div>
     </div>

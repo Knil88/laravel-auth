@@ -15,5 +15,6 @@
     @include('header')
    @yield('content-section')
    @include('footer')
+   <script src="../js/app.js"></script>
 </body>
 </html>

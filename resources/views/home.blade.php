@@ -13,7 +13,7 @@
          <div class="card shadow-sm">
           <img class="project-img" src="{{ asset('storage/' . $project -> main_image) }}" alt="">
           <div class="card-body">
-             <p class="card-text">{{$project->description}}</p>
+             <h5 class="card-text text-center">{{$project->name}}</h5>
              <div class="d-flex justify-content-between align-items-center">
                <div class="btn-group">
                  <button type="button" class="btn border btn_hover  "><a href="{{route('project.show',$project)}}" class="  btn_hover text-decoration-none ">View</a></button>

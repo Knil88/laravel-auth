@@ -18,11 +18,11 @@ class ProjectFactory extends Factory
     public function definition()
     {
         return [
-            'name'=>fake()->title(),
+            // 'name'=>null,
             'description' => fake() -> boolean() 
 						 ? fake() -> paragraph()
 						 : '',
-            
+            // 'main_image'=>null,
             'release_date'=>fake()->date(),
             'repo_link'=>fake()->url(),
 

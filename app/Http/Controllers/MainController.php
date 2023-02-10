@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Project;
 use Symfony\Contracts\Service\Attribute\Required;
+use Illuminate\Support\Facades\Storage;
 
 class MainController extends Controller
 
@@ -44,15 +45,21 @@ class MainController extends Controller
 
     public function projectstore(Request $request) {
 
+        
+
         $data = $request -> validate([
             'name' => 'string',
             'description' => 'nullable|string',
-            'main_image' => 'required|string',
+             'main_image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'release_date'=>'date',
             'repo_link'=>'required|string',
 
         ]);
-    
+        
+        $img_path = Storage::put('uploads', $data['main_image']);
+        
+        $data['main_image'] = $img_path;
+        
         $project = new Project();
     
         $project -> name = $data['name'];
@@ -62,6 +69,10 @@ class MainController extends Controller
         $project -> repo_link = $data['repo_link'];
     
         $project -> save();
+
+      
+
+       
     
         return redirect() -> route('home');
     }
@@ -74,13 +85,15 @@ class MainController extends Controller
         $data = $request -> validate([
             'name' => 'string',
             'description' => 'nullable|string',
-            'main_image' => 'required|string',
+             'main_image' => 'required|image|max:2048',
             'release_date'=>'date',
             'repo_link'=>'required|string',
 
         ]);
     
-       
+        $img_path = Storage::put('uploads', $data['main_image']);
+        
+        $data['main_image'] = $img_path;
     
         $project -> name = $data['name'];
         $project -> description = $data['description'];
@@ -89,6 +102,8 @@ class MainController extends Controller
         $project -> repo_link = $data['repo_link'];
     
         $project -> save();
+
+       
     
         return redirect() -> route('home');
     }

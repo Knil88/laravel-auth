@@ -29,7 +29,7 @@
         <input type="textarea" name="description">
         <br>
         <label for="main_image">Image url</label>
-        <input type="text" name="main_image">
+        <input type="file" name="main_image">
         <br>
         <label for="release_date">Date released</label>
         <input type="date" name="release_date">

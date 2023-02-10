@@ -15,5 +15,6 @@
     @include('header')
    @yield('form')
    @include('footer')
+   <script src="../js/app.js"></script>
 </body>
 </html>

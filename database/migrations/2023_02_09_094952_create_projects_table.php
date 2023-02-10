@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string('name',64)->notnullable();
+            $table->string('name',64)->default('Title');
             $table->text('description')->nullable();
-            $table->string('main_image')->default('spazio.jpg');
+            $table->string('main_image')->default('netflix.png');
             $table->date('release_date')->notnullable();
             $table->string('repo_link')->notnullable();
             $table->timestamps();
