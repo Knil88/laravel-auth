@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name',64)->notnullable();
             $table->text('description')->nullable();
-            $table->string('main_image')->notnullable();
+            $table->string('main_image')->default('spazio.jpg');
             $table->date('release_date')->notnullable();
             $table->string('repo_link')->notnullable();
             $table->timestamps();

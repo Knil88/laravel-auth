@@ -4,14 +4,14 @@
   
   <section class="my-2 ">
   
-    <h1 class="text-center text-white my-3">
+    <h1 class="text-center text-white my-3 p-2 border rounded-2 w-25 m-auto" id="portfolio-title">
       My Portfolio
   </h2>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 my-3 w-75 m-auto" >
       @foreach ($projects as $project)
       <div class="col">
          <div class="card shadow-sm">
-           <img src={{$project->main_image}} alt="">
+          <img class="project-img" src="{{ asset('storage/' . $project -> main_image) }}" alt="">
           <div class="card-body">
              <p class="card-text">{{$project->description}}</p>
              <div class="d-flex justify-content-between align-items-center">
