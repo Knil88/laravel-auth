@@ -3,10 +3,14 @@
    @section('content-section')
   
   <section class="my-2 ">
+   
   
-    <h1 class="text-center text-white my-3 p-2 border rounded-2 w-25 m-auto" id="portfolio-title">
-      My Portfolio
-  </h2>
+  <div>
+    <h2 class="text-center text-white my-3  w-75 m-auto" >
+      Hi , i'm Yari and i'm a: <span class="element my-3"></span> 
+    </h2>
+  </div>
+ 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 my-3 w-75 m-auto" >
       @foreach ($projects as $project)
       <div class="col">
