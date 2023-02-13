@@ -45,7 +45,7 @@ var typed = new Typed('.element', {
 	/**
 	 * @property {boolean} shuffle shuffle the strings
 	 */
-	shuffle: false,
+	shuffle: true,
   
 	/**
 	 * @property {number} backDelay time before backspacing in milliseconds
